@@ -1,5 +1,5 @@
 import React from 'react'
-
+import avatar from '../../assets/avtar.png'
 const RightHeroSection = () => {
   return (
      <div className="relative flex justify-center">
@@ -11,6 +11,7 @@ const RightHeroSection = () => {
             {/* Avatar placeholder */}
             <div className="w-48 h-48 rounded-full 
               bg-black/40 border border-white/20" />
+              <img src={avatar} alt="rizak" />
           </div>
 
           {/* Decorative blobs */}

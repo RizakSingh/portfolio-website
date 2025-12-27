@@ -1,5 +1,6 @@
 import React from 'react'
-
+import avatar from '../../assets/avtar.png'
+import avatarAbout from '../../assets/avatar2.png'
 const LeftAbout = () => {
   return (
     <div className="relative flex justify-center md:justify-start">
@@ -15,8 +16,8 @@ const LeftAbout = () => {
             backdrop-blur-xl flex items-center justify-center">
 
             {/* Avatar placeholder */}
-            <div className="w-40 h-40 rounded-full 
-              bg-black/50 border border-white/20" />
+         
+              <img src={avatarAbout} alt="rizak" className="w-60 h-60 rounded-full" />
           </div>
 
           {/* Floating dots */}

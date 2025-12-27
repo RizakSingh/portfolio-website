@@ -6,13 +6,17 @@ import Hero from './components/hero/Hero.jsx'
 import AboutMe from './components/aboutme/AboutMe.jsx'
 import SkillsAndCertificate from './components/techstack/SkillsAndCertificate.jsx'
 import Projects from './components/myprojects/Projects.jsx'
+import Contact from './components/contact/Contact.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     
-      <Projects />
+     <Hero ></Hero>
+     <AboutMe></AboutMe>
+     <SkillsAndCertificate></SkillsAndCertificate>
+     <Projects></Projects>
+   <Contact></Contact>
     </>
   )
 }

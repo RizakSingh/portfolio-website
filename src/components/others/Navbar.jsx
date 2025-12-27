@@ -13,10 +13,10 @@ const Navbar = () => {
 
         <ul className="flex gap-8 text-sm text-white/80">
           <li className="hover:text-white cursor-pointer">Home</li>
-          <li className="hover:text-white cursor-pointer">Services</li>
-          <li className="hover:text-white cursor-pointer">Our Works</li>
-          <li className="hover:text-white cursor-pointer">Reviews</li>
-          <li className="hover:text-white cursor-pointer">Contact Us</li>
+          <li className="hover:text-white cursor-pointer">About</li>
+          <li className="hover:text-white cursor-pointer">Skills</li>
+          <li className="hover:text-white cursor-pointer">Certificates</li>
+          <li className="hover:text-white cursor-pointer">projects</li>
         </ul>
 
         <button className="bg-green-400 text-black px-5 py-2 

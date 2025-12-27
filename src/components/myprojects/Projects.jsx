@@ -1,6 +1,9 @@
+import React from 'react'
+import imageEnhancer from'../../assets/imgEnhance.png'
+import ems from'../../assets/ems.png'
 const Projects = () => {
   return (
-    <section className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24 flex items-center">
+    <section  id="projects" className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24 flex items-center">
       
       <div className="max-w-7xl mx-auto w-full">
 
@@ -25,7 +28,7 @@ const Projects = () => {
             {/* 16:9 IMAGE */}
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6">
               <img
-                src="/ems-preview.png" // replace with your image
+                src={ems} // replace with your image
                 alt="RizEmp EMS"
                 className="w-full h-full object-cover"
               />
@@ -57,8 +60,8 @@ const Projects = () => {
             </div>
 
             <a
-              href="https://your-ems-live-link.com"
-              target="_blank"
+              href="https://employee-management-system-chi-six.vercel.app/"
+          
               rel="noopener noreferrer"
             >
               <button className="px-6 py-3 rounded-full bg-green-400 text-black 
@@ -75,7 +78,7 @@ const Projects = () => {
             {/* 16:9 IMAGE */}
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6">
               <img
-                src="/enhanso-preview.png" // replace with your image
+                src={imageEnhancer} // replace with your image
                 alt="Enhanso AI Image Enhancer"
                 className="w-full h-full object-cover"
               />
@@ -97,8 +100,8 @@ const Projects = () => {
             </p>
 
             <a
-              href="https://your-enhanso-live-link.com"
-              target="_blank"
+              href="https://enhanso-ai-image-enhancer.vercel.app/"
+            
               rel="noopener noreferrer"
             >
               <button className="px-6 py-3 rounded-full bg-green-400 text-black 

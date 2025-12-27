@@ -80,7 +80,7 @@ const SkillsAndCertificate = () => {
               backend, database, authentication, and deployment.
             </p>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1c5hmgyoLw5KpwDEC_cl2Ymv5MgmvTL5U/view?usp=drive_link"
               className="text-sm text-green-400 underline hover:text-green-300"
             >
               View Certificate
@@ -97,7 +97,7 @@ const SkillsAndCertificate = () => {
               use cases, ethical AI, and real-world applications.
             </p>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1yGtkmMlhnC8VpNh7D02AD268KYGBIvuM/view?usp=drive_link"
               className="text-sm text-green-400 underline hover:text-green-300"
             >
               View Certificate
