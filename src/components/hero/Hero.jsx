@@ -5,7 +5,7 @@ import HeroSection from './HeroSection'
 
 const Hero = () => {
   return <>
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#04130c] to-black text-white px-6 py-6">
+    <div id='home' className="min-h-screen bg-gradient-to-br from-black via-[#04130c] to-black text-white px-6 py-6">
   <Navbar></Navbar>
     
     <HeroSection></HeroSection>

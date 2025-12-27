@@ -3,7 +3,7 @@ import React from 'react'
 const SkillsAndCertificate = () => {
   return (
  
-    <section className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24">
+    <section id='skillscertificate' className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24">
 
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-12">
