@@ -2,9 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div>
-      
-    </div>
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#04130c] to-black text-white px-6 py-6">
   )
 }
 
