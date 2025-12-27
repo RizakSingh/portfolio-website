@@ -4,12 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Hero from './components/hero/Hero.jsx'
 import AboutMe from './components/aboutme/AboutMe.jsx'
+import SkillsAndCertificate from './components/techstack/SkillsAndCertificate.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-  <AboutMe></AboutMe>
+<SkillsAndCertificate>
+  
+</SkillsAndCertificate>
     </>
   )
 }
