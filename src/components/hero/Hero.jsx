@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../others/Navbar'
-import LeftHeroSection from '../others/LeftHeroSection'
-import HeroSection from '../others/HeroSection'
+import LeftHeroSection from './LeftHeroSection'
+import HeroSection from './HeroSection'
 
 const Hero = () => {
   return <>
