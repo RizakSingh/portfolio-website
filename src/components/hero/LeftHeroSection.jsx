@@ -6,8 +6,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 const LeftHeroSection = () => {
   return (
-            <div>
-          <span className="text-xs tracking-widest text-green-400 uppercase">
+            <div className='md:ml-20'>
+          <span className="text-xs tracking-widest text-green-400 uppercase ">
             Welcome to my world ✨
           </span>
 
@@ -48,10 +48,10 @@ const LeftHeroSection = () => {
 
           {/* SOCIAL PLACEHOLDERS */}
           <div className="mt-10 flex gap-4">
-            <FaGithub className='h-10 text-4xl' />
-         <FaLinkedin className='h-10 text-4xl' />
-         <FaInstagram className='h-10 text-4xl' />
-         <FaSquareXTwitter  className='h-10 text-4xl'/>
+      <a href="https://github.com/RizakSingh"> <FaGithub className='h-10 text-4xl'></FaGithub></a>
+         <a href="https://www.linkedin.com/in/rizakdeep-singh-8013681a1/"><FaLinkedin className='h-10 text-4xl' /></a>
+        <a href="https://instagram.com/rizakdeep_Singh"> <FaInstagram className='h-10 text-4xl' /></a>
+        <a href="https://x.com/rizakdeep_Singh"> <FaSquareXTwitter  className='h-10 text-4xl'/></a>
         </div>
         </div>
   )

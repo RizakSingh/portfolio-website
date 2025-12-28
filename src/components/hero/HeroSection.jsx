@@ -3,7 +3,7 @@ import LeftHeroSection from './LeftHeroSection'
 import RightHeroSection from './RightHeroSection'
 const HeroSection = () => {
   return (
-    <section className="max-w-full mx-auto mt-16 ml-35 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-15">
         <LeftHeroSection></LeftHeroSection>
        <RightHeroSection></RightHeroSection>
     </section>
