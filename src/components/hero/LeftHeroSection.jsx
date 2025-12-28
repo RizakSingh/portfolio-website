@@ -42,7 +42,7 @@ const LeftHeroSection = () => {
 
             <button className="border border-green-400 text-green-400 
               px-6 py-3 rounded-full hover:bg-green-400 hover:text-black transition">
-              <a href="">Hire Me</a>
+              <a href="https://drive.google.com/file/d/1zAazc6qQCusqBBv9ENIsONRuOgdoNQj2/view?usp=drive_link">Hire Me</a>
             </button>
           </div>
 
