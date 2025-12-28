@@ -51,7 +51,7 @@ const Projects = () => {
             <div className="text-sm text-white/70 mb-6">
               <p>
                 <span className="text-green-400">Demo Admin ID:</span>{" "}
-                admin@example.com
+                admin@ems.com
               </p>
               <p>
                 <span className="text-green-400">Password:</span>{" "}
@@ -60,7 +60,7 @@ const Projects = () => {
             </div>
 
             <a
-              href="https://employee-management-system-chi-six.vercel.app/"
+              href="https://employee-management-system-drab-seven.vercel.app/"
           
               rel="noopener noreferrer"
             >
