@@ -4,9 +4,25 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+
 const LeftHeroSection = () => {
+    const container = useRef();
+
+  useGSAP(() => {
+    gsap.from(container.current.children, {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power3.out",
+    });
+  });
+
   return (
-            <div className='md:ml-20'>
+            <div ref={container} className='md:ml-20'>
           <span className="text-xs tracking-widest text-green-400 uppercase ">
             Welcome to my world ✨
           </span>

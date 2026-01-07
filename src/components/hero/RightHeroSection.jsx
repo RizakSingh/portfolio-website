@@ -1,8 +1,23 @@
 import React from 'react'
 import avatar from '../../assets/avtar.png'
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+
 const RightHeroSection = () => {
+  const imageRef = useRef();
+
+useGSAP(() => {
+  gsap.from(imageRef.current, {
+    scale: 0.8,
+    opacity: 0,
+    duration: 1.2,
+    ease: "elastic.out(1,0.6)",
+  });
+});
+
   return (
-     <div className="relative flex justify-center">
+     <div ref={imageRef} className="relative flex justify-center">
           <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl 
             border border-white/20 bg-gradient-to-br 
             from-green-400/20 to-transparent 
