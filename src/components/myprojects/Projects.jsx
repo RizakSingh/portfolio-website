@@ -2,7 +2,9 @@ import React from 'react'
 import imageEnhancer from'../../assets/imgEnhance.png'
 import ems from'../../assets/ems.png'
 import { useEffect, useRef } from "react";
-import { reveal } from "../../animations/useReveal";
+import { reveal } from "../../animations/useReaveal";
+import { gsap } from "gsap";
+
 
 const Projects = () => {
   const cardsRef = useRef();
@@ -32,8 +34,24 @@ useEffect(() => {
 
 
           {/* PROJECT 1 — EMS */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 
-            rounded-3xl p-8 hover:border-green-400 transition">
+          <div   onMouseEnter={(e) => {
+    gsap.to(e.currentTarget, {
+      y: -12,
+      scale: 1.03,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  }}
+  onMouseLeave={(e) => {
+    gsap.to(e.currentTarget, {
+      y: 0,
+      scale: 1,
+      duration: 0.1,
+      ease: "power2.out",
+    });
+  }} className="bg-white/5 backdrop-blur-xl border border-white/10 
+            rounded-3xl p-8 hover:border-green-400 transition will-change-transform
+">
 
             {/* 16:9 IMAGE */}
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6">
@@ -82,8 +100,24 @@ useEffect(() => {
           </div>
 
           {/* PROJECT 2 — AI IMAGE ENHANCER */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 
-            rounded-3xl p-8 hover:border-green-400 transition">
+          <div   onMouseEnter={(e) => {
+    gsap.to(e.currentTarget, {
+      y: -12,
+      scale: 1.03,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  }}
+  onMouseLeave={(e) => {
+    gsap.to(e.currentTarget, {
+      y: 0,
+      scale: 1,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  }} className="bg-white/5 backdrop-blur-xl border border-white/10 
+            rounded-3xl p-8 hover:border-green-400 transition will-change-transform
+">
 
             {/* 16:9 IMAGE */}
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-6">

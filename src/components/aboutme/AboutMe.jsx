@@ -3,7 +3,7 @@ import LeftAbout from './LeftAbout'
 import RightAbout from './RightAbout'
 import BottomDivider from './BottomDivider'
 import { useEffect, useRef } from "react";
-import { reveal } from "../../animations/useReveal";
+import { reveal } from "../../animations/useReaveal";
   
 const AboutMe = () => {
   const sectionRef = useRef();

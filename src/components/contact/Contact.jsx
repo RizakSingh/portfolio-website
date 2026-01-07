@@ -1,9 +1,17 @@
 import React from 'react'
+import { useEffect, useRef } from "react";
+import { reveal } from "../../animations/useReaveal";
 
 const Contact = () => {
+  const contactRef = useRef();
+
+useEffect(() => {
+  reveal(contactRef.current.children);
+}, []);
+
   return (
     <section id='contact' className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24 flex items-center">
-      <div className="max-w-5xl mx-auto w-full">
+      <div ref={contactRef} className="max-w-5xl mx-auto w-full">
 
         {/* Heading */}
         <div className="text-center mb-16">
