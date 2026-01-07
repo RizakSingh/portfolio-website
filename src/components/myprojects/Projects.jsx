@@ -1,7 +1,16 @@
 import React from 'react'
 import imageEnhancer from'../../assets/imgEnhance.png'
 import ems from'../../assets/ems.png'
+import { useEffect, useRef } from "react";
+import { reveal } from "../../animations/useReveal";
+
 const Projects = () => {
+  const cardsRef = useRef();
+
+useEffect(() => {
+  reveal(cardsRef.current.children, { stagger: 0.25 });
+}, []);
+
   return (
     <section  id="projects" className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24 flex items-center">
       
@@ -19,7 +28,8 @@ const Projects = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+       <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
 
           {/* PROJECT 1 — EMS */}
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 
