@@ -1,2 +1,69 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Flip card styles */
+.flip-container {
+	perspective: 1000px;
+}
+.flipper {
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+	width: 100%;
+	height: 100%;
+}
+.flipper.is-flipped {
+	transform: rotateY(180deg);
+}
+.front,
+.back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.back {
+	transform: rotateY(180deg);
+}
+
+/* Skill card popout */
+.skill-card { transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s; transform-origin: center; }
+.skill-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 20px 40px rgba(0,0,0,0.45); z-index:10; }
+
+/* Ensure skill cards are never blurred by backdrop-filter or filters */
+.skill-card {
+	-webkit-backdrop-filter: none !important;
+	backdrop-filter: none !important;
+	filter: none !important;
+}
+
+/* Smooth transform/opacity transitions for sections targeted by ScrollTrigger.
+	 Use a backdrop pseudo-element for background blur so children (cards/text)
+	 are not blurred when scrolling. */
+section.page-section, div.page-section {
+	transition: transform .3s ease, opacity .3s ease;
+	position: relative;
+	--section-bg-blur: 0px;
+}
+
+/* Backdrop pseudo-element used to blur the section background only */
+section.page-section::before,
+div.page-section::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	backdrop-filter: blur(var(--section-bg-blur));
+	-webkit-backdrop-filter: blur(var(--section-bg-blur));
+}
+
+/* Ensure the section content stays above the backdrop */
+section.page-section > *, div.page-section > * { position: relative; z-index: 1; }
+
+/* Small heading entrance */
+.heading-animate { display:inline-block; transform: translateY(8px); opacity:0; animation: headingIn .7s forwards ease-out; }
+@keyframes headingIn { to { transform: translateY(0); opacity:1; } }

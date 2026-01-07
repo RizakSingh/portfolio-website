@@ -24,3 +24,29 @@ export const reveal = (targets, options = {}) => {
     }
   );
 };
+
+export const setupSectionScrollEffects = () => {
+  const sections = document.querySelectorAll('section.page-section, div.page-section');
+  sections.forEach((section) => {
+    // Animate a CSS custom property used by the section pseudo-element
+    // so only the background (backdrop) is blurred and section children
+    // (cards, text) remain sharp.
+    gsap.fromTo(
+      section,
+      { scale: 0.98, opacity: 0.9, '--section-bg-blur': '4px' },
+      {
+        scale: 1,
+        opacity: 1,
+        '--section-bg-blur': '0px',
+        ease: 'power1.out',
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+          end: 'top 15%',
+          scrub: true,
+        },
+      }
+    );
+  });
+};

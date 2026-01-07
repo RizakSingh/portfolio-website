@@ -10,7 +10,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <section id='contact' className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24 flex items-center">
+    <section id='contact' className="page-section min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24 flex items-center">
       <div ref={contactRef} className="max-w-5xl mx-auto w-full">
 
         {/* Heading */}

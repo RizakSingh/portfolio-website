@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 
 const SkillsAndCertificate = () => {
+  const cardsRef = useRef();
+
+  useEffect(() => {
+    if (!cardsRef.current) return;
+    const cards = cardsRef.current.children; 
+    gsap.from(cards, {
+     
+      y: 30,
+      scale: 0.98,
+      duration: 0.7,
+      ease: 'power3.out',
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: cardsRef.current,
+        start: 'top 85%',
+      },
+    });
+  }, []);
+
   return (
- 
+
     <section id='skillscertificate' className="min-h-screen w-full bg-gradient-to-br from-black via-green-950 to-black text-white px-6 py-24">
 
       {/* Heading */}
@@ -18,12 +38,13 @@ const SkillsAndCertificate = () => {
       {/* Scrollable Cards */}
       <div className="max-w-7xl mx-auto overflow-hidden">
         <div
+          ref={cardsRef}
           className="flex gap-6 overflow-x-auto pb-4 scroll-smooth"
           style={{ scrollbarWidth: "none" }}
         >
 
           {/* CARD 1 — Frontend */}
-          <div className="min-w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
+          <div className="skill-card min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
             <h3 className="text-lg font-semibold mb-3 text-green-400">
               Frontend Development
             </h3>
@@ -35,7 +56,7 @@ const SkillsAndCertificate = () => {
           </div>
 
           {/* CARD 2 — Backend */}
-          <div className="min-w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
+          <div className="skill-card min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
             <h3 className="text-lg font-semibold mb-3 text-green-400">
               Backend Development
             </h3>
@@ -47,7 +68,7 @@ const SkillsAndCertificate = () => {
           </div>
 
           {/* CARD 3 — Database */}
-          <div className="min-w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
+          <div className="skill-card min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
             <h3 className="text-lg font-semibold mb-3 text-green-400">
               Database Management
             </h3>
@@ -59,7 +80,7 @@ const SkillsAndCertificate = () => {
           </div>
 
           {/* CARD 4 — Gen AI */}
-          <div className="min-w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
+          <div className="skill-card min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
             <h3 className="text-lg font-semibold mb-3 text-green-400">
               Generative AI (Basics)
             </h3>
@@ -71,7 +92,7 @@ const SkillsAndCertificate = () => {
           </div>
 
           {/* CARD 5 — Full Stack Certificate */}
-          <div className="min-w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
+          <div className="skill-card min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
             <h3 className="text-lg font-semibold mb-3 text-green-400">
               Full Stack Development Certificate
             </h3>
@@ -88,7 +109,7 @@ const SkillsAndCertificate = () => {
           </div>
 
           {/* CARD 6 — Gen AI Certificate */}
-          <div className="min-w-[280px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
+          <div className="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400 transition">
             <h3 className="text-lg font-semibold mb-3 text-green-400">
               Gen AI Foundation Certificate
             </h3>
