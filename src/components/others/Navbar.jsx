@@ -1,6 +1,20 @@
 import React, { useState } from "react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 const Navbar = () => {
+  const navRef = useRef();
+
+useGSAP(() => {
+  gsap.from(navRef.current, {
+    y: -60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+});
+
   const [open, setOpen] = useState(false);
 
   const scrollTo = (id) => {
@@ -12,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <nav  ref={navRef}
       className="max-w-7xl mx-auto flex items-center justify-between
       bg-white/5 backdrop-blur-xl border border-white/10
       rounded-full px-4 sm:px-6 py-3 relative"
